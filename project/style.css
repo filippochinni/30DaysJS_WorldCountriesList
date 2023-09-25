@@ -1,0 +1,202 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    color: white;
+    background-color: #f4e7d2;
+    margin: 0;
+}
+
+#firstDiv {
+    background-image: url("./images/globe-2.jpg");
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 0 0 0 2000px rgba(2, 20, 99, 0.4);
+    height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*
+header {
+
+}
+*/
+
+h1 {
+    font-size: 5vw;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+#subtitle {
+    font-size: 1.3vw;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.3vw;
+}
+
+#countryCount {
+    color: #a7ef32;
+    font-size: 2vw;
+}
+
+/*
+#inputDiv {
+
+}
+*/
+
+#resultInfo {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#resultInfo span#stringaCercata {
+    color: #ffcb11;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#resultInfo span#numeroOccorrenze {
+    color: #3ee700;
+    font-weight: bolder;
+}
+
+#outOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottoneOpzione {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 3vw;
+    width: fit-content;
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 0.5vw;
+    color: white;
+    margin: 0.15vw;
+    font-size: 1vw;
+    transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.bottoneOpzione.active {
+    background-color: darkviolet;
+    box-shadow: inset 0 0 1.2vw rgba(0, 0, 0, 0.6);
+    transform: translateY(0.2vw);
+}
+
+#inputBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+
+    margin-left: 2.1vw; /*PEZZA*/
+}
+
+#searchBar {
+    width: 25vw;
+    height: 3vw;
+    border: 0.12vw solid grey;
+    border-radius: 2vw;
+
+    caret-color: #4a4949;
+    color: #4a4949;
+    padding-left: 1vw;
+    font-size: 1.5vw;
+}
+
+#searchBar:focus {
+    outline: 0.12vw solid aqua;
+}
+
+#searchBar::placeholder {
+    text-align: center;
+    font-size: 1vw;
+}
+
+#searchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vw;
+    width: 3vw;
+    background-color: transparent;
+    border: transparent;
+}
+
+#searchButton img#searchImage {
+    width: 2vw;
+    height: 2vw;
+}
+
+#outputDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-bottom: 5vw;
+    gap: 1.5vw;
+    column-gap: 2.5vw;
+}
+
+.countryP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /*
+    background-image: url("images/map_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    */
+    /*box-shadow: inset 0 0 0 5vw rgb(87, 72, 253, 0.3);*/
+
+    width: 10vw;
+    height: 10vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin: 0;
+
+    position: relative;
+}
+
+.countryP::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(44, 36, 135, 0.6));
+    z-index: -1;
+    box-shadow: inset 0 0 5vw rgba(0, 0, 0, 0.8);
+}
+
+.countryP::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+    background-image: url("images/map_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
